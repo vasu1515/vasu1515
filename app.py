@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 import pandas as pd
 
 # app = dash.Dash()
-app = dash.Dash(_name_)
+app = dash.Dash(__name__)
 server=app.server
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
 
@@ -167,5 +167,5 @@ def update_graph1(yaxis_column, yaxis_type, country_value, value_format):
         )
     }
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run_server()
